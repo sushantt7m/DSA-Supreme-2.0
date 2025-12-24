@@ -32,13 +32,12 @@ Node *insertIntoBST(Node *&root, int data)
         // recursive call for left subtree
         root->left = insertIntoBST(root->left, data);
     }
-    else
+    else 
     {
         // data > root->data , insert into leftSubtree
         root->right = insertIntoBST(root->right, data);
     }
     // jab left aur right create ho jayega to return ho jayenge
-    cout << root->data;
     return root;
 }
 
@@ -93,7 +92,7 @@ int main()
     Node *rootNode = NULL;
     createBST(rootNode);
 
-    cout << "Level Order Traversal : ";
+    cout << "Level Order Traversal : \n";
     levelOrderTraversal(rootNode);
     return 0;
 }

@@ -173,7 +173,6 @@ bool searchInBST(Node *root, int target)
         return searchInBST(root->left,target);
     }
 
-    // return leftAns || rightAns;
 }
 int main()
 {
