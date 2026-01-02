@@ -1,50 +1,44 @@
-#include <iostream>
-#include <unordered_map>
+#include<iostream>
+#include<unordered_map>
 using namespace std;
 
-int main()
-{
-    int a = 90;
-    // creating map
-    unordered_map<string, int> mapp;
 
-    // creating pairs in different ways to insert in mapp
-    pair<string, int> p = make_pair("Sush", 20);
-    pair<string, int> q("Nish", 21);
-    pair<string, int> r;
-    r.first = "ALok";
-    r.second = 19;
-    mapp["surya"] = 22;
+int main() {
+    unordered_map<string,int>mapping;
 
-    // Now inserting these pairs into map
-    mapp.insert(p); // way 1 to insert
-    mapp.insert(q); // way 1 to insert
-    mapp.insert(r); // way 1 to insert
+    //inserting the element in map
+    pair<string,int>p = make_pair("Sushant",21);
+    pair<string,int>q("Sushantt",24);
+    pair<string,int>r;
+    r.first ="Arun";
+    r.second = 23;
 
-    mapp.insert(make_pair("shanky", 18));
-    mapp.insert(pair<string, int>("sushi", 17));
+    //ways of inserting the key value pairs in map
+    mapping.insert(p);
+    mapping.insert(q);
+    mapping.insert(r);
+    mapping["Nishant"] = 23;
 
-    // Member functions of Map
-    // 1.size()
-    cout << "Size of Map is : " << mapp.size() << endl;
 
-    // 2.at()
-    cout << "mapping at Sush:" << mapp.at("Sush") << endl;
+    cout << "Size of map is :" << mapping.size() << endl;
 
-    // 3.count()
-    cout << "count of Nish: " << mapp.count("Nisha") << endl;
+    // Accessing the valuee
 
-    // 4.find()- can be used inside if function
-    if (mapp.find("Sush") != mapp.end())
-    {
-        // this above line means that the Sush find iterator is not at end
-        cout << "Sushh is Found" << endl;
+    cout << mapping.at("Sushant") << endl;
+    cout << mapping["Sushantt"]  << endl;
+    cout << mapping["Nishant"]  << endl;
+
+    // count() function prints 1 if that key is present in the map otherwise 0 
+    cout << mapping.count("Sushantt") << endl;
+
+    // find() function : it is iterator which gets to the end if the key is not found 
+    if(mapping.find("Sushantt") != mapping.end()){  // agar end pe hota to iska mtlbb wo mila hi nhi 
+        cout << "Found" << endl;
     }
-    else
-    {
-        // means that the iterator is at end
-        cout << "Sushh is not found" << endl;
+    else {
+        cout << "Not found" << endl;
     }
 
-    return 0;
+
+
 }

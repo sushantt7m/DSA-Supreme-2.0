@@ -12,9 +12,9 @@ int ExtremePrint(vector<int>arr){
         left++;
         right--;
     }
-    for(int j=0;j<arr.size();j++){
-        cout << arr[j] << " ";
-    }
+    // for(int j=0;j<arr.size();j++){
+    //     cout << arr[j] << " ";
+    // }
 }
 
 int main(){
