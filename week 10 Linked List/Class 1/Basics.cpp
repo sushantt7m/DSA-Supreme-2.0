@@ -71,12 +71,12 @@ int main()
     Node *head = first;
     cout << "Printing the entire Linked list : " << endl;
     PrintLL(first);
-
-    cout << "The Length of Linked list is : " << Nodeslen(head) << " nodes" << endl;
+    int len = Nodeslen(head);
+    cout << "The Length of Linked list is : " << len  << " nodes" << endl;
 
     return 0;
 }
 
 // Jab bhi linked list, function me pass hogi  using head ka pointer ya tail ka pointer , hm kabhi bhi original pointer ka use nhi krenge
-// Linked list ko traverse krne ke liye hm temporart(temp) pointer create krenge
+// Linked list ko traverse krne ke liye hm temporary(temp) pointer create krenge
 // Node*temp=head;
